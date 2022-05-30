@@ -4,7 +4,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 app = Flask(__name__)
 
 
-@app.route("/sms", methods=['post'])
+@app.route("/", methods=['post'])
 def reply():
     print ("1")
     text = request.form.get("Body")
@@ -18,4 +18,4 @@ def reply():
 
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run()
